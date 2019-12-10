@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bomberman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="src/styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <script src="src/scripts/Mapa.js"></script>
+    <script src="src/scripts/Bomba.js"></script>
+    <script src="src/scripts/Inimigo.js"></script>
+    <script src="src/scripts/Jogador.js"></script>
+    <script src="src/scripts/mapaMascara.js"></script>
+</head>
+<body>
+    <div class="creditos">
+        <p class="creditos-titulo">Instituto Federal de São Paulo – <strong>Campus de São Carlos</strong></p>
+        <p class="creditos-aluno">Fabricio Rocha | 160210-1</p>
+        <p class="creditos-aluno">João Pedro Enoki Guimarães | 160208-X</p>
+        <p class="creditos-aluno">Jonathan da Silva | 160214-4</p>
+        <p class="creditos-aluno">Rafael Otávio Giro | 160187-3</p>
+        <p class="creditos-aluno">Thon Christopher Ataide | 150102-X</p>
+    </div>
+    <div class="header">
+        <div id="bomb">
+            <div></div>
+        </div>
+    </div>
+    <canvas id="tela" width="200" height="200">Navegador não suportado!</canvas>
+    <div class="nav">
+        <div class="btn" id="btnIniciar" onclick="pausar()">Iniciar</div>
+        <div class="btn" id="btnNovo" onclick="reiniciar()">Novo jogo</div>
+    </div>
+    
+    <p class="instrucoes"><br>A,S,D,W -> Mover<br>Barra de Espaço -> Liberar bomba</p>
+
+    <audio controls loop id="sndTheme" hidden>
+        <source src="src/sounds/theme.flac" type="audio/mpeg">
+    </audio>
+    <audio controls id="sndBomba" hidden>
+        <source src="src/sounds/bomba.mp_" type="audio/mpeg">
+        <source src="src/sounds/bomba.ogg" type="audio/ogg">
+    </audio>
+    <audio controls id="sndDeath" hidden>
+        <source src="src/sounds/death.wav" type="audio/wav">
+    </audio>
+    <script src="src/scripts/bomberman.js"></script>
+</body>
+</html>
